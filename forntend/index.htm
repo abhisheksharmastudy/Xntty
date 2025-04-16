@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommuteShare - Share & Find Rides</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CommuteShare</h1>
+            <nav>
+                <a href="offer-ride.html" class="nav-button">Offer a Ride</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="find-ride-section" class="container prominent-section">
+            <h2>Find a Ride</h2>
+            <p>Search for comfortable and affordable rides shared by drivers near you.</p>
+            <form id="find-ride-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="find-origin">Leaving from:</label>
+                        <input type="text" id="find-origin" name="origin" placeholder="e.g., Patna Junction" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="find-destination">Going to:</label>
+                        <input type="text" id="find-destination" name="destination" placeholder="e.g., Boring Road" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                     <div class="form-group">
+                        <label for="find-date">Date:</label>
+                        <input type="date" id="find-date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="button-primary find-button">Find Rides</button>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
+        <section id="ride-results-section" class="container">
+            <h2>Available Rides</h2>
+            <div class="ride-list">
+                <article class="ride-card">
+                    <div class="ride-card-main">
+                        <p><strong>From:</strong> Patna Junction</p>
+                        <p><strong>To:</strong> Boring Road</p>
+                        <p><strong>Date:</strong> 2025-04-18</p>
+                        <p><strong>Time:</strong> 09:00 AM</p>
+                    </div>
+                    <div class="ride-card-details">
+                        <p><strong>Driver:</strong> Amit K.</p>
+                        <p><strong>Seats Available:</strong> 2</p>
+                        <p><strong>Price:</strong> ₹50</p>
+                         <button class="button-secondary">View Details</button>
+                    </div>
+                </article>
+
+                <article class="ride-card">
+                     <div class="ride-card-main">
+                        <p><strong>From:</strong> Danapur</p>
+                        <p><strong>To:</strong> Gandhi Maidan</p>
+                        <p><strong>Date:</strong> 2025-04-18</p>
+                        <p><strong>Time:</strong> 08:30 AM</p>
+                    </div>
+                    <div class="ride-card-details">
+                        <p><strong>Driver:</strong> Priya S.</p>
+                        <p><strong>Seats Available:</strong> 1</p>
+                        <p><strong>Price:</strong> ₹40</p>
+                        <button class="button-secondary">View Details</button>
+                    </div>
+                </article>
+                 </div>
+             <p class="no-results" style="display: none;">No rides found matching your criteria.</p> </section>
+
+         <section id="offer-cta-section" class="container secondary-section">
+            <h2>Have an empty seat?</h2>
+            <p>Share your ride, save on fuel, and meet new people.</p>
+            <a href="offer-ride.html" class="button-secondary">Offer a Ride Now</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CommuteShare. All rights reserved.</p>
+            <p><a href="#">About Us</a> | <a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

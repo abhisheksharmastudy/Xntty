@@ -1,0 +1,294 @@
+/* Basic Reset & Defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9; /* Light grey background */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Reduced padding */
+}
+
+header h1 {
+    color: #007aff; /* Apple blue */
+    font-weight: 600;
+    margin: 0;
+}
+header h1 a.header-link {
+    text-decoration: none;
+    color: inherit; /* Inherit the blue color */
+}
+
+
+/* Navigation */
+nav .nav-button {
+     background-color: #007aff;
+     color: white;
+     padding: 8px 15px;
+     text-decoration: none;
+     border-radius: 6px;
+     font-weight: 500;
+     transition: background-color 0.2s ease;
+}
+
+nav .nav-button:hover {
+     background-color: #005ecb;
+}
+
+
+/* Main Content Sections */
+main {
+    padding: 30px 0;
+}
+
+section {
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: #1c1c1e; /* Darker heading */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+section p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.prominent-section {
+     border-top: 4px solid #007aff; /* Highlight main action sections */
+}
+
+.secondary-section {
+    background-color: #eef6ff; /* Lighter blue background */
+    text-align: center;
+}
+
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form elements/groups */
+}
+
+fieldset {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 15px; /* Space between fieldsets */
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.form-group {
+    flex: 1; /* Allow groups to grow */
+    min-width: 200px; /* Minimum width before wrapping */
+    display: flex;
+    flex-direction: column;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #444;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f8f9fa; /* Slightly off-white input background */
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #007aff;
+    box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resize */
+    min-height: 60px;
+}
+
+
+/* Buttons */
+button, .button-primary, .button-secondary {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none; /* For link buttons */
+    display: inline-block; /* For link buttons */
+    text-align: center;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-primary {
+    background-color: #007aff;
+    color: white;
+}
+.button-primary:hover {
+    background-color: #005ecb;
+     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.button-secondary {
+    background-color: #e5e5ea; /* Light grey button */
+    color: #007aff; /* Blue text */
+    border: 1px solid #d1d1d6;
+}
+.button-secondary:hover {
+    background-color: #dcdce0;
+}
+
+/* Align find button with date input */
+#find-ride-form .form-row:last-child .form-group {
+    align-items: flex-end; /* Align content (button) to the bottom */
+}
+#find-ride-form .find-button {
+     width: 100%; /* Make button take full width of its group */
+     margin-top: 24px; /* Align with label height roughly */
+}
+
+
+/* Ride Results */
+.ride-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ride-card {
+    background-color: #f8f9fa; /* Slightly different background for cards */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 20px;
+}
+
+.ride-card-main {
+    flex: 2; /* Takes more space */
+    min-width: 250px;
+}
+.ride-card-details {
+    flex: 1;
+    min-width: 150px;
+    text-align: right;
+}
+
+.ride-card p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+.ride-card p strong {
+    color: #333;
+}
+
+.ride-card .button-secondary {
+     padding: 8px 12px; /* Smaller button for cards */
+     margin-top: 10px;
+}
+
+.no-results {
+    font-style: italic;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #e5e5ea; /* Light grey footer */
+    color: #555;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #007aff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments (Basic Example) */
+@media (max-width: 768px) {
+     header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+     #find-ride-form .find-button {
+         margin-top: 0; /* Remove margin alignment on mobile */
+    }
+
+    .ride-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+     .ride-card-details {
+        text-align: left;
+    }
+}

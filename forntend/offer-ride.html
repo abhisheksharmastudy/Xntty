@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer a Ride - CommuteShare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+             <h1><a href="index.html" class="header-link">CommuteShare</a></h1>
+             <nav>
+                 <a href="index.html" class="nav-button">Find a Ride</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="offer-ride-section" class="container prominent-section">
+            <h2>Offer a Ride</h2>
+            <p>Fill in the details below to share your upcoming trip.</p>
+            <form id="offer-ride-form">
+                 <fieldset>
+                    <legend>Route Details</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="offer-origin">Leaving from:</label>
+                            <input type="text" id="offer-origin" name="origin" placeholder="e.g., My Home Address, Patna" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="offer-destination">Going to:</label>
+                            <input type="text" id="offer-destination" name="destination" placeholder="e.g., Office Address, Bailey Road" required>
+                        </div>
+                    </div>
+                 </fieldset>
+
+                 <fieldset>
+                     <legend>Schedule & Capacity</legend>
+                     <div class="form-row">
+                        <div class="form-group">
+                            <label for="offer-date">Date:</label>
+                            <input type="date" id="offer-date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="offer-time">Time:</label>
+                            <input type="time" id="offer-time" name="time" required>
+                        </div>
+                    </div>
+                     <div class="form-row">
+                        <div class="form-group">
+                            <label for="offer-seats">Seats Available:</label>
+                            <input type="number" id="offer-seats" name="seats" min="1" max="8" placeholder="e.g., 3" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="offer-price">Price per Seat (₹):</label>
+                            <input type="number" id="offer-price" name="price" min="0" placeholder="e.g., 50" required>
+                        </div>
+                    </div>
+                 </fieldset>
+
+                 <fieldset>
+                     <legend>Additional Information (Optional)</legend>
+                     <div class="form-group">
+                        <label for="offer-notes">Notes for Riders:</label>
+                        <textarea id="offer-notes" name="notes" rows="3" placeholder="e.g., Luggage space limited, Music preference, AC available"></textarea>
+                    </div>
+                 </fieldset>
+
+                <button type="submit" class="button-primary">Publish Ride Offer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CommuteShare. All rights reserved.</p>
+        </div>
+    </footer>
+
+     <script src="script.js"></script>
+</body>
+</html>
